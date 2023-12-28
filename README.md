@@ -7,7 +7,7 @@ don't want to allocate the whole thing all at once. It is also best to keep UpTo
 relatively small. If you need a high-capacity container, just use a Vec<T>. 
 
 ## Safety
-This crate makes heavy use of `std::mem::MaybeUninit<T>``. The UpTo type is internally a `[MaybeUninit<T>; N]`. Reading 
+This crate makes heavy use of `std::mem::MaybeUninit<T>`. The UpTo type is internally a `[MaybeUninit<T>; N]`. Reading 
 from a `MaybeUninit` is inherently unsafe, but we can guarantee safety since any value at an index less than `UpTo.len`
 is known to be initialized. 
 
