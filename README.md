@@ -1,5 +1,5 @@
 
-[![Crate](https://img.shields.io/badgs/crates.io-upto-v0.1.3)](https://github.com/RylanYancey/upto)
+[![Crate](https://img.shields.io/badges/crates.io-upto-v0.1.3)](https://github.com/RylanYancey/upto)
 
 # UpTo 
 Fixed-Capacity Variable Length Stack-Allocated Arrays
