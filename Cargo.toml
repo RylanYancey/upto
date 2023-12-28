@@ -1,0 +1,11 @@
+[package]
+name = "upto"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Rylan Yancey"]
+description = "Fixed-capacity and variable length stack allocated arrays"
+readme = "README.md"
+repository = "https://github.com/RylanYancey/upto"
+keywords = ["vec", "stack", "util", "array"]
+categories = ["data-structures", "memory-management"]
