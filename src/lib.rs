@@ -502,6 +502,26 @@ where
     }
 }
 
+impl<const N: usize, T> Clone for UpTo<N, T> 
+where
+    T: Clone,
+{
+    fn clone(&self) -> Self {
+        let mut array: [MaybeUninit<T>; N] = MaybeUninit::uninit_array::<N>();
+
+        for i in 0..self.len {
+            unsafe {
+                array[i] = MaybeUninit::new(self.array[i].assume_init_ref().clone());
+            }
+        }
+
+        Self {
+            array,
+            len: self.len,
+        }
+    }
+}
+
 impl<const N: usize, T> From<&[T]> for UpTo<N, T> 
 where
     T: Clone
